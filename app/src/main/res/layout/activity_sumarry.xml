@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".SumarryActivity">
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LAST QUERY"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        app:icon="@drawable/ic_baseline_format_list_numbered_24"
+        android:id="@+id/query"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="10dp"
+        android:id="@+id/cardviee"
+        android:backgroundTint="@color/white"
+        app:cardBackgroundColor="@color/white"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:text="click for Date "
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:drawableStart="@drawable/ic_baseline_date_range_24"
+                android:layout_alignParentStart="true"
+                />
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="10dp"
+        android:id="@+id/earing"
+        android:backgroundTint="@color/white"
+        app:cardBackgroundColor="@color/white"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/earntext"
+                android:text="TODAY"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/todayTotal"
+                android:text="00"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:layout_below="@id/cardviee"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        tools:listitem="@layout/view_holder_delete_bill_item"
+        android:id="@+id/epoxyDel"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+</LinearLayout>

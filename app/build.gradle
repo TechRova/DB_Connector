@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
+}
+kapt {
+    correctErrorTypes = true
+}
+android {
+    compileSdkVersion 29
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    buildFeatures {
+
+        dataBinding = true
+
+        // for view binding:
+        // viewBinding = true
+    }
+    defaultConfig {
+        applicationId "in.techrova.dbconnector"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 15
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    //groovy
+/*    configurations.all {
+        resolutionStrategy.force "org.antlr:antlr4-runtime:4.5.3"
+        resolutionStrategy.force "org.antlr:antlr4-tool:4.5.3"
+    }*/
+}
+
+dependencies {
+  //  implementation files('libs/jtds-1.3.1-dist.jar')
+    implementation 'net.sourceforge.jtds:jtds:1.3.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.1'
+
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'com.google.firebase:firebase-analytics-ktx:18.0.0'
+    implementation 'com.google.firebase:firebase-database-ktx:19.5.1'
+    def room_version = "2.2.5"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.airbnb.android:epoxy:4.1.0'
+    implementation 'com.airbnb.android:epoxy-databinding:4.1.0'
+    implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
+    implementation 'com.github.javadev:underscore:1.61'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+// https://mvnrepository.com/artifact/androidx.fragment/fragment-ktx
+    implementation group: 'androidx.fragment', name: 'fragment-ktx', version: '1.3.0-beta02'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation 'cat.ereza:customactivityoncrash:2.3.0'
+    kapt 'com.airbnb.android:epoxy-processor:4.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="label"
+        type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="35sp"
+            tools:text ="No Data Found"
+            android:text="@{label}"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_baseline_not_interested_24"
+            android:layout_margin="50dp" />
+    </LinearLayout>
+</layout>

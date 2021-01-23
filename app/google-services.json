@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "701569647942",
+    "project_id": "db-connector",
+    "storage_bucket": "db-connector.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701569647942:android:0830f3dd5633450f585147",
+        "android_client_info": {
+          "package_name": "in.techrova.dbconnector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701569647942-lalskadpmrqb9e1gh3tlvj7qk03snf8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWCBWpf9WRrfp1t5Tc3qruF2mMaDNJwSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701569647942-lalskadpmrqb9e1gh3tlvj7qk03snf8o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
