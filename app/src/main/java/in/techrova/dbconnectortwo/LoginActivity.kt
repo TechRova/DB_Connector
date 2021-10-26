@@ -1,15 +1,12 @@
-package `in`.techrova.dbconnector
+package `in`.techrova.dbconnectortwo
 
-import `in`.techrova.dbconnector.data.TinyDB
-import `in`.techrova.dbconnector.utils.FBUtils
+import `in`.techrova.dbconnectortwo.data.TinyDB
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.analytics.ktx.logEvent
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database

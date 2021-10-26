@@ -1,4 +1,4 @@
-package in.techrova.dbconnector.data;
+package in.techrova.dbconnectortwo.data;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -26,9 +26,9 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-import in.techrova.dbconnector.MainActivityViewModel;
-import in.techrova.dbconnector.model.epoxymodels.BillItem;
-import in.techrova.dbconnector.utils.FBUtils;
+import in.techrova.dbconnectortwo.MainActivityViewModel;
+import in.techrova.dbconnectortwo.model.epoxymodels.BillItem;
+import in.techrova.dbconnectortwo.utils.FBUtils;
 
 public class ConnectionHelper {
 

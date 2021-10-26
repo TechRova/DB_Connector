@@ -1,7 +1,7 @@
-package `in`.techrova.dbconnector
+package `in`.techrova.dbconnectortwo
 
-import `in`.techrova.dbconnector.data.ConnectionHelperKt
-import `in`.techrova.dbconnector.model.epoxymodels.BillItem
+import `in`.techrova.dbconnectortwo.data.ConnectionHelperKt
+import `in`.techrova.dbconnectortwo.model.epoxymodels.BillItem
 import android.app.Application
 import android.util.Log
 import android.widget.CompoundButton

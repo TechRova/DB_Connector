@@ -1,15 +1,12 @@
-package `in`.techrova.dbconnector
+package `in`.techrova.dbconnectortwo
 
-import `in`.techrova.dbconnector.data.DeletedBill
-import `in`.techrova.dbconnector.data.DeletedBillDao
-import `in`.techrova.dbconnector.model.epoxymodels.BillItem
-import `in`.techrova.dbconnector.utils.DateConverterUtils
+import `in`.techrova.dbconnectortwo.data.DeletedBill
+import `in`.techrova.dbconnectortwo.data.DeletedBillDao
+import `in`.techrova.dbconnectortwo.utils.DateConverterUtils
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import java.util.*

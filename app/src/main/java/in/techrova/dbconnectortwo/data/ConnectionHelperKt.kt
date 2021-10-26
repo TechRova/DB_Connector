@@ -1,8 +1,8 @@
-package `in`.techrova.dbconnector.data
+package `in`.techrova.dbconnectortwo.data
 
-import `in`.techrova.dbconnector.MainActivityViewModel
-import `in`.techrova.dbconnector.model.epoxymodels.BillItem
-import `in`.techrova.dbconnector.utils.FBUtils
+import `in`.techrova.dbconnectortwo.MainActivityViewModel
+import `in`.techrova.dbconnectortwo.model.epoxymodels.BillItem
+import `in`.techrova.dbconnectortwo.utils.FBUtils
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.StrictMode

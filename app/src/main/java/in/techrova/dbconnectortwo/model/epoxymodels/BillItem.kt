@@ -1,4 +1,4 @@
-package `in`.techrova.dbconnector.model.epoxymodels
+package `in`.techrova.dbconnectortwo.model.epoxymodels
 
 
 import android.widget.TextView

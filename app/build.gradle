@@ -21,10 +21,10 @@ android {
         // viewBinding = true
     }
     defaultConfig {
-        applicationId "in.techrova.dbconnector"
+        applicationId "in.techrova.dbconnectortwo"
         minSdkVersion 22
         targetSdkVersion 29
-        versionCode 17
+        versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

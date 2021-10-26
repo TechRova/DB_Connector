@@ -1,6 +1,6 @@
-package `in`.techrova.dbconnector
+package `in`.techrova.dbconnectortwo
 
-import `in`.techrova.dbconnector.model.epoxymodels.BillItem
+import `in`.techrova.dbconnectortwo.model.epoxymodels.BillItem
 import android.util.Log
 import com.github.underscore.lodash.U
 import com.google.gson.Gson

@@ -1,10 +1,8 @@
-package `in`.techrova.dbconnector
+package `in`.techrova.dbconnectortwo
 
-import `in`.techrova.dbconnector.data.TinyDB
-import `in`.techrova.dbconnector.utils.FBUtils
-import android.R.attr.port
+import `in`.techrova.dbconnectortwo.data.TinyDB
+import `in`.techrova.dbconnectortwo.utils.FBUtils
 import android.app.AlertDialog
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity

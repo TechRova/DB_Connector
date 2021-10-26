@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="in.techrova.dbconnector">
+    package="in.techrova.dbconnectortwo">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".myApplication"
+        android:name="in.techrova.dbconnectortwo.myApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DBConnector"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LoginActivity"
+        <activity android:name="in.techrova.dbconnectortwo.LoginActivity"
             android:theme="@style/Theme.MaterialComponents.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,15 +22,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SumarryActivity"
+            android:name="in.techrova.dbconnectortwo.SumarryActivity"
             android:theme="@style/Theme.MaterialComponents.Light" />
         <activity
-            android:name=".SettingActivity"
+            android:name="in.techrova.dbconnectortwo.SettingActivity"
             android:theme="@style/Theme.MaterialComponents.Light">
 
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="in.techrova.dbconnectortwo.MainActivity"
             android:theme="@style/Theme.MaterialComponents.Light" />
     </application>
 

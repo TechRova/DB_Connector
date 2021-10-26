@@ -5,11 +5,11 @@
     <data>
         <variable
             name="billItem"
-            type="in.techrova.dbconnector.data.DeletedBill" />
+            type="in.techrova.dbconnectortwo.data.DeletedBill" />
 
         <variable
             name="viewmodel"
-            type="in.techrova.dbconnector.MainActivityViewModel" />
+            type="in.techrova.dbconnectortwo.MainActivityViewModel" />
     </data>
 
     <LinearLayout

@@ -1,4 +1,4 @@
-package `in`.techrova.dbconnector
+package `in`.techrova.dbconnectortwo
 
 import android.app.Application
 

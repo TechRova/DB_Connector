@@ -1,8 +1,8 @@
-package `in`.techrova.dbconnector
+package `in`.techrova.dbconnectortwo
 
-import `in`.techrova.dbconnector.data.AppDatabase
-import `in`.techrova.dbconnector.data.DeletedBillDao
-import `in`.techrova.dbconnector.data.TinyDB
+import `in`.techrova.dbconnectortwo.data.AppDatabase
+import `in`.techrova.dbconnectortwo.data.DeletedBillDao
+import `in`.techrova.dbconnectortwo.data.TinyDB
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText

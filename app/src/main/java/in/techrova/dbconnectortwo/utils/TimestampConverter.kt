@@ -1,4 +1,4 @@
-package `in`.techrova.dbconnector.utils
+package `in`.techrova.dbconnectortwo.utils
 
 import androidx.room.TypeConverter
 import java.util.*

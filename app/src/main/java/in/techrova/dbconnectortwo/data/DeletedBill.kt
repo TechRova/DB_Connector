@@ -1,14 +1,11 @@
-package `in`.techrova.dbconnector.data
+package `in`.techrova.dbconnectortwo.data
 
-import `in`.techrova.dbconnector.utils.DateConverterUtils
+import `in`.techrova.dbconnectortwo.utils.DateConverterUtils
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.text.SimpleDateFormat
-import java.time.Instant
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 @Entity
