@@ -190,6 +190,12 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+        viewModel.toast.observe(this, Observer {
+            Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+
+            viewModel.progress.postValue(false)
+
+        })
         viewModel.success.observe(this, Observer {
             Toast.makeText(this, it, Toast.LENGTH_LONG).show()
 

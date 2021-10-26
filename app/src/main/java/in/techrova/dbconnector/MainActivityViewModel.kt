@@ -23,6 +23,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
     lateinit var progress : MutableLiveData<Boolean>
     lateinit var error : MutableLiveData<Throwable>
     lateinit var success : MutableLiveData<String>
+    lateinit var toast : MutableLiveData<String>
 
     var page: Int = 1
     val delXML = mutableMapOf<Int,String>()
@@ -34,6 +35,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
         progress = MutableLiveData<Boolean>()
         error = MutableLiveData<Throwable>()
         success = MutableLiveData<String>()
+        toast = MutableLiveData<String>()
         total.postValue(0)
         viewModelScope.launch {
             withContext(Dispatchers.IO) {

@@ -48,7 +48,7 @@ class ConnectionHelperKt (viewModel: MainActivityViewModel, applicationContext: 
                     "ConnHelp",
                     "createConnection: connected " + conn.metaData.databaseProductName
                 )
-                viewModel.success.postValue(
+                viewModel.toast.postValue(
                     """connection success. 
  
  Server name  ${conn.metaData.databaseProductName}"""
@@ -76,14 +76,17 @@ class ConnectionHelperKt (viewModel: MainActivityViewModel, applicationContext: 
         @Page INT
 
 SELECT  @PageSize = 10,
-        @Page = $page 
+        @Page = $page
         
         IF OBJECT_ID('tempdb..#tempSalHdr') IS NOT NULL
         DROP TABLE #tempSalHdr
         
-        Select *,
+        Select h.SalId,BillNo,BillDt,BillRefNo,Sum(Amount) as TotAmt,sum(d.TaxAmt)TaxAmt,DiscPer,Max(DiscAmt)DiscAmt,        
+        Max(RndOff)RndOff,Round(Sum(Amount+d.TaxAmt),0) as NetAmt,
                 ROW_NUMBER() OVER(ORDER BY BillDt) ID
-       into #tempSalHdr FROM    SalHdr where BillDt = '$date'  
+       into #tempSalHdr FROM    SalHdr h,SalDet d         
+Where h.SalId=d.SalId and ItemId not in (29,72) and BillDt = '$date'
+Group by h.SalId,BillNo,BillDt,BillRefNo,h.DiscPer 
 
 ;WITH PageNumbers AS(
         SELECT *
@@ -161,11 +164,11 @@ FOR XML AUTO,elements;"""
                     sqlButton(bills, date, page)
                     result.postValue(resultSet)
                 } else {
-                    Log.d("ConnHelper", "deleteBills: error ")
+                    Log.d("ConnHelper", "deleteBills: error result ${resultSet}")
                     viewModel.success.postValue("failed  to delete ")
                 }
             } catch (e: SQLException) {
-                Log.d("ConnHelper", "deleteBills: error ")
+                Log.d("ConnHelper", "deleteBills: error ${e.message}")
                 viewModel.error.postValue(e)
                 e.printStackTrace()
             }
